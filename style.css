@@ -46,11 +46,37 @@ body {
 
 .hero-content {
   margin: 0 15%;
+  color: white;
 }
 
 .hero-content .tagline {
-  color: white;
   font-size: 4rem;
   letter-spacing: 2px;
   margin: 32px 0;
 }
+
+.hero-content .skills {
+  /* 使用 flexbox 達到兩欄式效果 */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.hero-content .skills p {
+  width: 50%;
+}
+
+.hero-content .skills ul {
+  width: 50%;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.hero-content .skills li {
+  /* 利用 float 來讓 li 達到兩欄式的效果 */
+  float: left;
+  width: 50%;
+}
+
+
