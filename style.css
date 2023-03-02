@@ -1,13 +1,27 @@
 body {
   margin: 0;
   padding: 0;
-  font-family:'Crimson Pro', serif;
+  font-family: "Crimson Pro", serif;
+}
+
+/* 兩欄式效果 */
+
+.two-columns {
+  /* 使用 flexbox 達到兩欄式效果 */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.two-columns>p {
+  width: 50%;
 }
 
 /* Hero section */
 
 .hero {
-  height: 90vh;
+  /* 如果單純使用 height: 90vh 的話，畫面變小文字會 overflow */
+  min-height: 90vh;
   background-color: #f08e80;
 }
 
@@ -23,7 +37,7 @@ body {
   color: white;
   text-decoration: none;
   margin-right: 16px;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
 }
 
 .navbar p {
@@ -55,28 +69,50 @@ body {
   margin: 32px 0;
 }
 
-.hero-content .skills {
-  /* 使用 flexbox 達到兩欄式效果 */
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-}
-
-.hero-content .skills p {
-  width: 50%;
-}
-
-.hero-content .skills ul {
+.hero-content .two-columns ul {
   width: 50%;
   list-style: none;
   box-sizing: border-box;
   padding: 0;
 }
 
-.hero-content .skills li {
+.hero-content .two-columns li {
   /* 利用 float 來讓 li 達到兩欄式的效果 */
   float: left;
   width: 50%;
+  font-size: 1.2rem;
+  margin-top: 8px;
 }
 
+/* Blog section */
 
+.blog-content {
+  margin: 24px 15%;
+}
+
+.blog-posts {
+  width: 50%;
+  float: left;
+}
+
+.blog-posts {
+  margin-top: 24px;
+}
+
+.blog-posts p {
+  margin: 8px 0;
+}
+
+.blog-posts .blog-title {
+  font-size: 1.5rem;
+}
+
+.blog-posts .blog-description {
+  font-size: 1rem;
+}
+
+.blog-posts .blog-date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 32px;
+}
